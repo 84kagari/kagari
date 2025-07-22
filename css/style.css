@@ -1,0 +1,442 @@
+@charset "UTF-8";
+/* 共通部分
+-------------------------------------------------- */
+html {
+    font-size: 100%;
+    height: 100%;
+}
+body {
+    min-height: 100vh;
+    /*height: 100%;/*Informationのために追記*/
+    /*min-height: 100vh;/*Informationのために追記*/
+    display: flex;/*Informationのために追記*/
+    flex-direction: column;/*Informationのために追記*/
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDGothic", sans-serif;
+    line-height: 1.7;
+    color:  #432;
+}
+main{
+    flex: 1;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+/* レイアウト*/
+.wrapper {
+    max-width: 1120px;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+.align-center {
+    text-align: center;
+}
+/*見出し*/
+.font-english {
+    font-family: 'Philosopher', 'Hiragino Kaku Gothic ProN', sans-serif;
+    font-weight: normal;
+}
+.page-title,
+.heading-large,
+.heading-medium {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    line-height: 1.4;
+}
+.page-large{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.sub-cover {
+    background-size: cover;
+    background-position: center bottom;
+    /*height: 528px;*/
+    margin-top: 2rem;
+  
+}
+/* NEWS　*/
+.cover-class {
+    margin-top: 1rem;
+}
+/*MENU*/
+.cover-menu{
+    background-image: url();
+}
+.grid {
+    display: grid;
+    gap: 2rem 0.5rem;
+    grid-template-columns: repeat(2,1fr);
+    text-align: center;
+}
+.item img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.item p {
+    font-size: .875rem;
+}
+/* 記事部分*/
+.post {
+    margin-bottom: 3rem;
+}
+.post-title {
+    font-weight: normal;
+    margin-bottom: 1.25rem;
+    }
+.post-info {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.post-cat {
+    display: flex;
+    gap: .5rem;
+    list-style: none;
+}
+.post-cat a{
+    color: #432;
+    background-color: #ffe880ff;
+    border-radius: 8px;
+    font-size: .875rem;
+    padding: .5rem .75rem;
+}
+.post-cat a:hover {
+    background-color: #ffe880ff;
+}
+.post-date {
+    font-size: .875rem;
+}
+.post-thumbnail{
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+}
+.post p {
+    margin-bottom: 1.5rem;
+    line-height: 2;
+}
+/*サイドバー*/
+.side-menu {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.side-menu li {
+    border-bottom: 1px solid #c9c2bc;
+}
+.side-menu a{
+    color: #432;
+    display: block;
+    padding: 1rem;
+}
+.side-menu a:hover {
+    color: #ffe880ff;
+}
+
+/* ヘッダー
+-------------------------------------------------- */
+.page-header {
+    padding-top: 5rem;
+}
+.logo {
+    width: 210px;
+}
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    
+}
+.page-footer {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    background-color: #f8f8f8;
+}
+/*conTACT*/
+.cover-contact {
+    background-image: url();
+}
+/*店舗情報*/
+.location {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+.location-info {
+    margin-bottom: 2rem;
+}
+.location-info .info {
+    padding: 0;
+}
+.email {
+    max-width: 916px;
+    background-color: #faf7f0;
+    border-radius: 48px;
+    padding: 1.5rem 2.5rem 2.5rem;
+    margin: 0 auto 2rem;
+}
+.email p {
+    margin: 1rem 0 2rem;
+}
+/*SNS*/
+.sns {
+    display: flex;
+    flex-direction: column; /* スマホでは縦並び（これが基本） */
+    gap: 3rem; /* アイテム間の隙間 */
+}
+
+.sns-item {
+    flex: 1; /* 横並びになった時に均等に幅を取る */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sns-item .heading-medium {
+    margin-bottom: .5rem;
+}
+/* デスクトップ版　----------------------*/
+@media (min-width: 800px) {
+
+  .main-nav {
+    flex-direction: row; /* ←ここをrowに */
+    gap: 1rem;
+    font-size: 1.1rem;
+    align-items: center;
+    /*margin-right: 2rem; */
+  }
+  /*見出し*/
+    .page-title {
+        font-size: 2.5rem;
+    }
+    .heading-large {
+        font-size: 4rem;
+        text-align: center;
+        padding-right: 1.5rem;
+    }
+    .post-title {
+        font-size: 2rem;
+    }
+    /*ヘッダー*/
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1.5rem;
+    }
+    .main-nav {
+        font-size: 1.5rem;
+    }
+    /*ヘッドカバー画像*/
+    .sub-cover {
+        height: 400px;
+        margin-bottom: 6rem;
+    }
+    /*MENU*/
+    .cover-menu{
+        background-image: url(../images/);
+    }
+    .grid {
+        grid: 3re 2rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .sns {
+        flex-direction: row; /* 横並びに変更 */
+        justify-content: space-around; /* アイテムを均等に配置 */
+        align-items: flex-start; /* 上端を揃える */
+        gap: 2rem; /* 横の隙間を調整 */
+    }
+    /*classroom*/
+    .cover-class {
+        background-image: url(../images/classroom.svg);
+    }
+    .class-contents {
+        display: flex;
+        justify-content: space-between;
+        /* gap: 2rem; ← これを追加！ */
+        align-items: flex-start;
+    }
+    main.class-contents {
+    min-height: 60vh; /* 必要に応じて調整 */
+    }
+    .post {
+        width: 60%;
+        order : 2;
+    }
+    .sidebar {    /* 2カラムの余白調整 */
+
+        width: 20%;
+        order : 1;
+    }
+    .ad {
+        order: 1;
+    }
+    .sidebar .heading-medium {
+        line-height: 1;
+        margin-bottom: 1rem;
+    }
+    /*HOME*/
+    .cover-home {
+    background-size: cover;
+    background-position: center bottom;
+    background-position-y: 50%;
+    height: 600px;
+    margin-top: 4rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    background-image: url(../images/boy.jpg);
+    }
+    .about {
+        margin: 4rem auto 0;
+    }
+    .item img{
+        margin-bottom: .5rem;
+    }
+    .item p{
+        font-size: 1rem;
+    }
+    /*フッター*/
+        /*CONTACT*/
+    .cover-contact {
+        background-image: url();
+    }
+    .location {
+        display: flex;
+        flex-direction: row;
+        gap: .5rem;
+    }
+    .location-info {
+        width: 32%;
+        white-space: nowrap;
+
+    }
+    .location-info .info th {
+        padding-left: 2rem;
+    }
+    .location-map {
+        width: 60%;
+    }
+
+    }
+.main-nav a{
+    color: #432;
+    }
+.main-nav a:hover {
+    color: #0bd;
+}
+.about{
+    max-width: 736px;
+    padding: 0 1.5rem;
+    margin: 3rem auto 4rem;
+}
+.about p {
+    margin-bottom: 3rem;
+}
+.cover {
+    background-size: cover;
+    background-position: center bottom;
+    background-position-y: 50%;
+    height: 800px;
+}
+
+.cover-home {
+    background-size: cover;
+    background-position: center bottom;
+    background-position-y: 50%;
+    height: 600px;
+    margin-bottom: 2rem;
+    /* background-image: url(../images/boy.jpg); */
+} 
+    .heading-large {
+        font-size: 2rem;
+        text-align: center;
+    }
+/*ボタン*/
+.btn {
+    display: inline-block;
+    font-size: 1.5rem;
+    background-color: #0bd;
+    color: #fff;
+    border-radius: 8px;
+    padding: .75rem 1.5rem;
+    transition: .5s;
+}
+.btn:hover{
+    scale: 1.2;
+}
+/* 画像ボタン用のホバーアクション */
+.btn-image {
+    display: inline-block; /* 拡大・縮小アニメーションを適用するため */
+    transition: .5s;       /* 変化にかかる時間を0.5秒に設定 */
+}
+
+.btn-image:hover {
+    scale: 1.2;            /* マウスを乗せたら1.2倍に拡大 */
+}
+/* フッター
+-------------------------------------------------- */
+.page-footer {
+    background-image:  url();
+    background-size: cover;
+    background-position: center;
+    margin-top: 4rem;
+    padding: 2rem 0;
+
+    clear: both;
+}
+.info {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    /*padding: 0 1.5rem;-----------IPHONEでの余白*/
+    border-spacing: 0;
+}
+.info th,
+.info td {
+    border-bottom: 1px solid #c9c2bc;
+}
+.info th {
+    text-align: left;
+    font-weight: normal;
+    padding: 1rem;
+}
+.info td {
+    padding: 1rem ;
+}
+.copyright {
+    background-color: rgb(238, 241, 31);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 6rem;
+    color: #fff;
+}
+
+/*iframe*/
+iframe { /* ← スペースを詰める */
+    width: 100%;
+    vertical-align: bottom; /* 下の隙間を消すおまじない */
+}* .infoクラスを持つテーブルのセル内で、長い単語も折り返す */
+.info td {
+    word-break: break-all;
+}
+/* style.css の末尾に追加 */
+
+/* 画面幅が380px以下のデバイスでSNS埋め込みがはみ出すのを防ぐ */
+@media (max-width: 380px) {
+  /*
+    新しく作った .sns-content をターゲットに指定します。
+    Facebookを埋め込む場合も、同じクラスで囲めばこのスタイルが適用されます。
+  */
+  .sns-content {
+    transform: scale(0.85);
+    transform-origin: top center;
+  }
+}
