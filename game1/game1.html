@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>ブロック積みゲーム</title>
+    <script src="enchant.js"></script>
+    <script src="ui.enchant.js"></script>
+    <script src="nineleap.enchant.js"></script>
+  </head>
+  <body>
+    <div id="enchant-stage"></div>
+    <script>
+      // enchant.js を始める合図
+      enchant();
+      // 変数宣言
+      let game = null;
+      let ufo = null;
+      let baseBlock = null;
+      let block = null;
+      let blockLength = 1;
+      // ブラウザが立ち上がったら実行される処理
+      window.onload = function () {
+        game = new Core(400, 500);
+        game.fps = 60;
+        game.preload(
+          "bg.png",
+          "ufo.png",
+          "block.png",
+          "clear.png"
+        );
+        // ゲーム開始時に実行される処理
+        game.onload = function () {
+          game.rootScene.backgroundColor = "black";
+          // 背景の作成
+          const bg = new Sprite(400, 500);
+          bg.image = game.assets["bg.png"];
+          bg.moveTo(0, 0);
+          game.rootScene.addChild(bg);
+          // UFOの作成
+          ufo = new Sprite(34, 26);
+          ufo.image = game.assets["ufo.png"];
+          ufo.moveTo(30, 50);
+          ufo.speed = 1.5;
+          ufo.speedUp = 1;
+          // UFOの動作
+          ufo.addEventListener("enterframe", function () {
+            this.x += this.speed * this.speedUp;
+            // UFOの移動範囲の制限
+            if (this.x < 0 || this.x > 366) {
+              this.speed *= -1;
+            }
+            // UFOのスピードが速くなる
+            switch (blockLength) {
+              case 1:
+                break;
+              case 2:
+              case 3:
+                this.speedUp = 2;
+                break;
+              case 4:
+              case 5:
+                this.speedUp = 4;
+                break;
+              case 6:
+              case 7:
+              case 8:
+                this.speedUp = 6;
+                break;
+              default:
+                this.speedUp = 8;
+            }
+          });
+          game.rootScene.addChild(ufo);
+          // 一番下にベースブロックを配置
+          baseBlock = new Block(187, 474);
+          // ゲームシーンの動作
+          game.rootScene.addEventListener("enterframe", function () {
+            if (block == null) {
+              block = new Block(ufo.x + 4, ufo.y + 26);
+              block.addEventListener("enterframe", blockHorizontalMove);
+            }
+          });
+          // 画面をクリックしたときの動作
+          game.rootScene.addEventListener("touchstart", function () {
+            block.removeEventListener("enterframe", blockHorizontalMove);
+            block.addEventListener("enterframe", blockDownMove);
+          });
+        };
+        game.start();
+      };
+      // ブロック・ベースブロックを作成するクラス
+      const Block = Class.create(Sprite, {
+        initialize: function (x, y) {
+          Sprite.call(this, 26, 26);
+          this.image = game.assets["block.png"];
+          this.frame = rand(0, 8);
+          this.x = x;
+          this.y = y;
+          game.rootScene.addChild(this);
+        },
+      });
+      // ブロックを左右に動かす関数
+      function blockHorizontalMove() {
+        block.x = ufo.x + 4;
+      }
+      // ブロックを下に動かす関数
+      function blockDownMove() {
+        if(block.intersect(baseBlock)) {
+          // ブロックがベースブロックに衝突したときの動作
+          block.removeEventListener("enterframe", blockDownMove);
+          block.y = baseBlock.y - block.height;
+          baseBlock = block;
+          block = null;
+          blockLength++;
+          if(blockLength >= 16) {
+            game.end(null, null, game.assets["clear.png"]);
+          }
+        } else {
+          block.y += 5;
+          if(block.y > 500) {
+            game.end();
+          }
+        }
+      }
+      // 乱数を作成する関数
+      function rand(min, max) {
+      return Math.floor(Math.random() * (max + 1 - min) + min);
+      }
+    </script>
+  </body>
+</html>
