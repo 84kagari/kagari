@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAGARI:KID'Sプログラミングラボ</title>
+    <meta name="description" content="KAGARIはKID'Sプログラミングラボの戸塚舞岡鎌倉教室を運営しています。子供たちにプログラミングの楽しさを伝え、居場所を提供します。">
+    <!--ファビコン-->
+    <link rel="icon" type="image/svg+xml" href="images/kagariC.svg">
+
+    <!--リセットCSS-->
+    <link rel="stylesheet" href="css/reset.css">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    <!--オリジナルCSS-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="cover cover-home">
+        <header class="page-header wrapper">
+            <!-- ハンバーガーメニュー追加 -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h1 class="align-center">
+                <a href="index.html"><img class="logo" src="images/kagariB.svg" alt="KAGARIホーム"></a>
+            </h1>
+            <nav id="nav-menu" class="nav-menu">
+                <ul class="main-nav font-english">
+                    <li><a href="classroom.html">Room</a></li>
+                    <li><a href="prolabo.html" class="menu-narrow">Prolabo</a></li>
+                    <li><a href="about.html">KAGARI</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+                <p class="sub-cover">KAGARIはKID'Sプログラミングラボ<br>戸塚/舞岡/鎌倉教室を運営しています。<br>子供たちにプログラミングの楽しさを<br>伝え居場所を提供します。</p>
+            </nav>
+            
+        </header>
+    </div>
+    <h2 class="page-title heading-large font-english" >KAGARI x KID’Programinglabo</h2>
+    <p class="about">ゲーム作りを通じて本格的コードプログラミング<br>かじぃと一緒に自分の”楽しい”をカタチにする冒険を始めよう！</p>
+    <img class="village-img" src="images/village.png">
+    <main class="wrapper grid">
+        <div class="item">
+            <img src="images/P-Jr.svg" alt="ScratchJr" class="expand-btn">
+            <p class="expand-btn">ScratchJr<br>プレプライマリーコース(1年)</p>
+            <div class="expand-content" style="display:none;">
+                年長～小3：タブレットPCで使えるビジュアルプログラミング<br>
+                文字なしで直感的に操作可能<br>
+                自分の考えをカタチにするのに最適<br>
+                基礎を自分のものにできる<br>
+                繰り返し・メッセージ・動き・ステージの移動<br>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/P-Sc.svg" alt="Scratch" class="expand-btn">
+            <p class="expand-btn">Scratch<br>プライマリー(1年)<br>ベーシック(3年)</p>
+            <div class="expand-content" style="display:none;">
+                小1～高校生:ブロック型プログラミング<br>
+                ブロックを積むようにコードを書くことができるので<br>
+                論理的思考・順序・繰り返し・条件分岐などの<br>
+                コードプログラミングを学ぶ前に基礎が学べる<br>
+                じっくり学ぶ事でコーディング力が養われます
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/P-Py.svg" alt="Python" class="expand-btn">
+            <p class="expand-btn">Python:プレミドル</p>
+            <div class="expand-content" style="display:none;">
+                AI・データ分析・Web開発などに使われる本格言語<br>
+                文法がシンプルで共通テスト高校の情報Ⅰにも取り入れられる事も多い<br>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/P-Js.svg" alt="JavaScript.html.css" class="expand-btn">
+            <p  class="expand-btn">JavaScript.html.css:ミドル</p>
+                <div class="expand-content" style="display:none;">
+                Webサイトやアプリの動きを作る言語<br>
+                HTML/CSSと組み合わせてインタラクティブな表現が可能<br>
+                <br>
+                <br>
+                
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/P-uni.svg" alt="Unity" class="expand-btn">
+            <p class="expand-btn">C#.unity:アドバンス</p>
+                <div class="expand-content" style="display:none;">
+                Unityで使うゲーム開発用言語<br>
+                オブジェクト指向で<br>
+                本格的なロジックが組める<br>
+                <br>
+                
+            </div>
+
+        </div>
+        <div class="item">
+            <img src="images/P-AI.svg" alt="AI情報ドリル" class="expand-btn">
+            <p class="expand-btn">共通テスト定期テスト対策</p>
+                <div class="expand-content" style="display:none;">
+                多くの高校で採用されているAI情報ドリル<br>
+                上位版のFor学習塾をKID’Sプログラミングラボではオンラインで<br>
+                携帯からも学習する事ができます<br>
+                共通テスト対策も万全<br>
+                </div>
+        </div>
+        <div class="item">
+            <img src="images/P-Ble.svg" alt="3Dモデリング" class="expand-btn">
+            <p class="expand-btn">Blender:3Dモデリング</p>
+                <div class="expand-content" style="display:none;">
+                    モデリング技術も少しずつ学んでいきます<br>
+                </div>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <h3 class="heading-large font-english">Information KAGARI</h3>
+        <table class="info">
+            <tr>
+              <th>教室名</th>
+                <td>KAGARI:KID'Sプログラミングラボ<br>
+                戸塚教室/舞岡教室/鎌倉教室</td>
+            </tr>
+            <tr>
+                <th>電話</th>
+                <td>045-900-9049</td>
+            </tr>
+            <tr>
+                <th>mail</th>
+                <td><a href="https://kids-prolab.com/contact">お問い合わせ</a></td>
+            </tr>
+            <th>LINE</th>
+            <td>
+                <a href="https://lin.ee/seu708U" class="btn-image" target="_blank" rel="noopener">
+                    <img src="images/ja.png" alt="友だち追加" height="36" border="0">
+                </a>
+            </td>
+        </table>
+        <div class="copyright">
+            <small>&copy; 2021 KAGARI</small>
+        </div>
+    </footer>
+<script src="js/menu.js"></script>
+</body>
+</html>
