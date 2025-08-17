@@ -24,6 +24,67 @@ a {
 img {
     max-width: 100%;
 }
+.logo {
+    height: 120px;
+    width: auto;
+    max-width: 100%;
+}
+
+/* ヘッダー構成 */
+.logo-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+/* スライダー構成 */
+.hero-slider {
+    width: 360px;
+    height: 240px; /* 高さはお好みで調整可能 */
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  font-size: 1.0rem;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
 /* レイアウト*/
 .wrapper {
     max-width: 1120px;
@@ -174,19 +235,17 @@ img {
 .page-header {
     padding-top: 0;
 }
-.logo {
-    width: 210px;
-}
+
 .main-nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* 右寄せ */
     gap: 1.5rem;
     font-size: 1.5rem;
     list-style: none;
     padding: 0;
-    margin: 0 auto;
-    
+    margin: 0;
 }
+
 .main-nav .menu-narrow {
   line-height: 0.5 !important;
 }
@@ -258,6 +317,18 @@ img {
 /* デスクトップ版　----------------------*/
 @media (min-width: 800px) {
 
+
+  .logo-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
   .main-nav {
     flex-direction: row; /* ←ここをrowに */
     gap: 1rem;
@@ -398,7 +469,7 @@ img {
     color: #432;
     }
 .main-nav a:hover {
-    color: #0bd;
+    color: rgb(121, 123, 1);
 }
 .about{
     max-width: 736px;

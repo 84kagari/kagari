@@ -27,21 +27,39 @@
                 <span></span>
                 <span></span>
             </div>
-            <h1 class="align-center">
-                <a href="index.html"><img class="logo" src="images/kagariB.svg" alt="KAGARIホーム"></a>
-            </h1>
+
             <nav id="nav-menu" class="nav-menu">
+                <!-- ロゴをナビゲーション内に配置 -->
                 <ul class="main-nav font-english">
+                    <li><a href="index.html"><img class="logo" src="images/kagariB.svg" alt="KAGARIホーム"></a></li>
                     <li><a href="classroom.html">Room</a></li>
                     <li><a href="prolabo.html" class="menu-narrow">Prolabo</a></li>
                     <li><a href="about.html">KAGARI</a></li>
                     <li><a href="contact.html">contact</a></li>
                 </ul>
-                <p class="sub-cover">KAGARIはKID'Sプログラミングラボ<br>戸塚/舞岡/鎌倉教室を運営しています。<br>子供たちにプログラミングの楽しさを伝え<br>居場所を提供します。</p>
+                 <!-- <p class="sub-cover">KAGARIはKID'Sプログラミングラボ<br>戸塚/舞岡/鎌倉教室を運営しています。<br>子供たちにプログラミングの楽しさを伝え<br>居場所を提供します。</p> -->
             </nav>
             
         </header>
     </div>
+
+    <section class="hero-slider">
+  <div class="slide active">
+    <img src="images/class1.jpg" alt="Scratchで遊ぶ子ども">
+    <div class="caption">はじめてのプログラミングが、楽しい！</div>
+  </div>
+
+  <div class="slide">
+    <img src="images/totsuka-B.jpg" alt="Pythonでコードを書く様子">
+    <div class="caption">論理的思考が、未来をひらく</div>
+  </div>
+
+  <div class="slide">
+    <img src="images/maioka-A.jpg" alt="Unityでゲーム制作中">
+    <div class="caption">創造力が、仲間とつながる</div>
+  </div>
+</section>
+
     <img class="village-img" src="images/step.svg">
     <h2 class="page-title heading-large font-english" >KAGARI x KID’Programinglabo</h2>
     <main class="wrapper grid">
@@ -95,5 +113,23 @@
         </div>
     </footer>
 <script src="js/menu.js"></script>
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+    }
+
+    function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 3000); // 3秒ごとに切り替え
+    showSlide(currentSlide); // 初期表示
+</script>
 </body>
 </html>
