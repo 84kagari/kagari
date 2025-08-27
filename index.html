@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,66 +33,92 @@
                 <!-- ロゴをナビゲーション内に配置 -->
                 <ul class="main-nav font-english">
                     <li><a href="index.html"><img class="logo" src="images/kagariB.svg" alt="KAGARIホーム"></a></li>
-                    <li><a href="classroom.html">Room</a></li>
-                    <li><a href="prolabo.html" class="menu-narrow">Prolabo</a></li>
-                    <li><a href="about.html">KAGARI</a></li>
-                    <li><a href="contact.html">contact</a></li>
+                    <li><a href="prolabo.html">Prolabo<br><span class="jp">KID'Sプログラミングラボ</span></a></li>
+                    <li><a href="classroom.html">Room<br><span class="jp">教室について</span></a></li>
+                    <li><a href="about.html">KAGARI<br><span class="jp">はじめての方へ</span></a></li>
+                    <li><a href="contact.html">contact<br><span class="jp">お問い合わせ</span></a></li>
                 </ul>
-                 <!-- <p class="sub-cover">KAGARIはKID'Sプログラミングラボ<br>戸塚/舞岡/鎌倉教室を運営しています。<br>子供たちにプログラミングの楽しさを伝え<br>居場所を提供します。</p> -->
+                <!-- <p class="sub-cover">KAGARIはKID'Sプログラミングラボ<br>戸塚/舞岡/鎌倉教室を運営しています。<br>子供たちにプログラミングの楽しさを伝え<br>居場所を提供します。</p> -->
             </nav>
-            
+
         </header>
     </div>
+    <main class="wrapper">
+        <section class="hero-slider">
+            <div class="slide active">
+                <img src="images/class1.jpg" alt="Scratchで遊ぶ子ども">
+                <div class="caption">はじめてのプログラミングが、楽しい！</div>
+            </div>
 
-    <section class="hero-slider">
-  <div class="slide active">
-    <img src="images/class1.jpg" alt="Scratchで遊ぶ子ども">
-    <div class="caption">はじめてのプログラミングが、楽しい！</div>
-  </div>
+            <div class="slide">
+                <img src="images/totsuka-B.jpg" alt="Pythonでコードを書く様子">
+                <div class="caption">論理的思考が、未来をひらく</div>
+            </div>
 
-  <div class="slide">
-    <img src="images/totsuka-B.jpg" alt="Pythonでコードを書く様子">
-    <div class="caption">論理的思考が、未来をひらく</div>
-  </div>
+            <div class="slide">
+                <img src="images/maioka-A.jpg" alt="Unityでゲーム制作中">
+                <div class="caption">創造力が、仲間とつながる</div>
+            </div>
+        </section>
 
-  <div class="slide">
-    <img src="images/maioka-A.jpg" alt="Unityでゲーム制作中">
-    <div class="caption">創造力が、仲間とつながる</div>
-  </div>
-</section>
-
+    </main>
     <img class="village-img" src="images/step.svg">
-    <h2 class="page-title heading-large font-english" >KAGARI x KID’Programinglabo</h2>
+    <h2 class="page-title heading-large font-english">KAGARI x KID’Programinglabo</h2>
     <main class="wrapper grid">
-        
         <div class="item">
-            <img src="images/T-PC.svg" alt="本格的コードプログラミング">
-            <p>本格的コードプログラミング</p>
+            <img src="images/T-PC.svg" alt="本格的コードプログラミング" class="expand-btn">
+            <p class="expand-btn">本格的コードプログラミング</p>
+            <div class="expand-content" style="display:none;">
+                小1～大学社会人<br>
+                本格的コードプログラミングを<br>
+                小学生からでも大学生からでも<br>
+                無理なくステップアップ<br>
+                <a href="prolabo.html">詳しくはこちら</a>
+            </div>
         </div>
         <div class="item">
-            <img src="images/T-hutokou.svg" alt="不登校でも大丈夫">
-            <p>不登校でも大丈夫</p>
+            <img src="images/T-hutokou.svg" alt="不登校でも大丈夫" class="expand-btn">
+            <p class="expand-btn">不登校でも大丈夫</p>
+            <div class="expand-content" style="display:none;">
+                集団が不安なお子様でも<br>
+                不安が強い場合は個別指導いたします<br>
+                様子を見ながら徐々に他の子とも<br>
+                一緒にやっていきます。<br>
+                急にこれなくてもzoomも対応<br>
+                振替も可能です<br>
+                <a href="about.html">詳しくはこちら</a>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/T-class.svg" alt="受講について" class="expand-btn">
+            <p  class="expand-btn">教室とカリキュラム</p>
+            <div class="expand-content" style="display:none;">
+                ３つの教室と選べる受講<br>
+                戸塚舞岡鎌倉と３つの教室に参加できます。<br>
+                zoomによるオンライン授業も対応しております<br>
+                <a href="classroom.html">詳しくはこちら</a>
+            </div>
+        </div>
+        <div class="item">
+            <a href="Price.html"><img src="images/T-Price.svg" alt="料金表"></a>
+            <a href="Price.html"><p>受講料・夏期講習・検定講座</p></a>
         </div>
         <div class="item">
             <img src="images/T-Voice.svg" alt="生徒さんの声">
             <p>生徒さんの声</p>
         </div>
         <div class="item">
-            <img src="images/T-class.svg" alt="受講について">
-            <p>教室とカリキュラム</p>
-        </div>
-        <div class="item">
-            <img src="images/T-Price.svg" alt="料金表">
-            <p>受講料・夏期講習・検定講座</p>
+            <img src="images/T-enpower.svg" alt="料金表">
+            <p>鎌倉エンパワーメントプロジェクト</p>
         </div>
     </main>
     <footer class="page-footer">
         <h3 class="heading-large font-english">Information KAGARI</h3>
         <table class="info">
             <tr>
-              <th>教室名</th>
+                <th>教室名</th>
                 <td>KAGARI:KID'Sプログラミングラボ<br>
-                戸塚教室/舞岡教室/鎌倉教室</td>
+                    戸塚教室/舞岡教室/鎌倉教室</td>
             </tr>
             <tr>
                 <th>電話</th>
@@ -112,24 +139,25 @@
             <small>&copy; 2021 KAGARI</small>
         </div>
     </footer>
-<script src="js/menu.js"></script>
-<script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
+    <script src="js/menu.js"></script>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
 
-    function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-    });
-    }
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
 
-    function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-    }
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
 
-    setInterval(nextSlide, 3000); // 3秒ごとに切り替え
-    showSlide(currentSlide); // 初期表示
-</script>
+        setInterval(nextSlide, 3000); // 3秒ごとに切り替え
+        showSlide(currentSlide); // 初期表示
+    </script>
 </body>
+
 </html>

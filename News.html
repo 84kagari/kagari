@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>class:教室について</title>
+    <title>News</title>
     <meta name="description" content="KAGARIはKID'Sプログラミングラボの戸塚舞岡鎌倉教室を運営しています。子供たちにプログラミングの楽しさを伝え、居場所を提供します。">
     <!--ファビコン-->
     <link rel="icon" type="image/svg+xml" href="images/kagariC.svg">
@@ -19,39 +19,40 @@
 </head>
 
 <body>
-    <div class="">
+    <div class="cover cover-home">
         <header class="page-header wrapper">
-            <h1 class="align-center">
-                <a href="index.html"><img class="logo" src="images/kagariB.svg" alt="KAGARIホーム"></a>
-            </h1>
-            <nav >
-                <ul class="main-nav font-english">
-                    <li><a href="classroom.html">room</a></li>
-                    <li><a href="content.html">prolabo</a></li>
-                    <li><a href="about.html">about</a></li>
-             
-                    <!--
-                    <li><a href="classroom.html">教室案内</a></li>
-                    <li><a href="content.html">KID'Sプログラミングラボについて</a></li>
-                    <li><a href="about.html">KAGARIについて</a></li>
-                    <li><a href="contact.html">お問い合わせ</a></li>
-                    -->
+            <!-- ハンバーガーメニュー追加 -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
+            <nav id="nav-menu" class="nav-menu">
+                <!-- ロゴをナビゲーション内に配置 -->
+                <ul class="main-nav font-english">
+                    <li><a href="index.html"><img class="logo" src="images/kagariB.svg" alt="KAGARIホーム"></a></li>
+                    <li><a href="prolabo.html">Prolabo<br><span class="jp">KID'Sプログラミングラボ</span></a></li>
+                    <li><a href="classroom.html">Room<br><span class="jp">教室について</span></a></li>
+                    <li><a href="about.html">KAGARI<br><span class="jp">はじめての方へ</span></a></li>
+                    <li><a href="contact.html">contact<br><span class="jp">お問い合わせ</span></a></li>
                 </ul>
+                <!-- <p class="sub-cover">KAGARIはKID'Sプログラミングラボ<br>戸塚/舞岡/鎌倉教室を運営しています。<br>子供たちにプログラミングの楽しさを伝え<br>居場所を提供します。</p> -->
             </nav>
+
         </header>
     </div>
-    <h2 class="page-title font-english">Classroom</h2>
+    <h2 class="page-title font-english">News</h2>
     <main class="wrapper class-contents">
         <article class="classroom  sub-cover">
             <header>
                 <h2 class="post-title">夏のふたつの講座</h2>
                 <div class="post-info">
                     <ul class="post-cat">
-                        <li><a href="#">短期講座</a></li>
-                        <li><a href="#">資格試験</a></li>
+                        <li><a href="#">短期講座</a>一回だけの授業を受けたい,プログラミング体験してみたい！</li>
+                        <li><a href="#">検定対策講座</a>ジュニアプログラミング検定対策講座です</li>
                     </ul>
-                    <time datetime="2025-08-01">2025年8月1日</time>
+                    <time datetime="2025-09-01">2025年9月1日</time>
                 </div>
             </header>
             <img class="post-thumbnail" src="images/class1.jpg" alt="夏期講習">
@@ -87,7 +88,8 @@
         <table class="info">
             <tr>
                 <th>教室名</th>
-                <td>KAGARI:KID'Sプログラミングラボ</td>
+                <td>KAGARI:KID'Sプログラミングラボ<br>
+                    戸塚教室/舞岡教室/鎌倉教室</td>
             </tr>
             <tr>
                 <th>電話</th>
@@ -95,8 +97,14 @@
             </tr>
             <tr>
                 <th>mail</th>
-                <td><a href="mailto:info@kagari84.com">info@kagari84.com</a></td>
+                <td><a href="https://kids-prolab.com/contact">お問い合わせ</a></td>
             </tr>
+            <th>LINE</th>
+            <td>
+                <a href="https://lin.ee/seu708U" class="btn-image" target="_blank" rel="noopener">
+                    <img src="images/ja.png" alt="友だち追加" height="36" border="0">
+                </a>
+            </td>
         </table>
         <div class="copyright">
             <small>&copy; 2021 KAGARI</small>
