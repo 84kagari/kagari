@@ -52,18 +52,20 @@
 
                 <section class="hero-slider">
                     <div class="slide active">
-                        <img src="images/class1.jpg" alt="Scratchで遊ぶ子ども">
-                        <div class="caption">はじめてのプログラミングが、楽しい！</div>
+                        <img src="images/maioka-N.jpg" alt="犬のクロ">
+                        <div class="caption">犬のクロがお出迎え</div>
                     </div>
-
                     <div class="slide">
-                        <img src="images/maioka-A.jpg" alt="Unityでゲーム制作中">
+                        <img src="images/maioka-A.jpg" alt="検定挑戦">
+                        <div class="caption">検定に挑戦</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/maioka-B.jpg" alt="二人で挑戦">
                         <div class="caption">創造力が、仲間とつながる</div>
                     </div>
-
                     <div class="slide">
-                        <img src="images/maioka-A.jpg" alt="Unityでゲーム制作中">
-                        <div class="caption">創造力が、仲間とつながる</div>
+                        <img src="images/maioka-G.jpg" alt="舞岡教室外観">
+                        <div class="caption">舞岡教室</div>
                     </div>
                 </section>
         </section>
@@ -78,7 +80,9 @@
                     <tr>
                         <th>住所</th>
                         <td>神奈川県横浜市戸塚区舞岡町866-15<br>
-                            舞岡駅徒歩8分</td>
+                            舞岡駅徒歩8分<br>
+                            もしくは<br>
+                            戸塚駅バス5分+日立和敬寮前徒歩3分</td>
                     </tr>
                     <tr>
                         <th>月2</th>
@@ -94,11 +98,11 @@
                     </tr>
                     <tr>
                         <th>土曜*</th>
-                        <td>9:45～11:45<br>14:45～15:45</td>                         
+                        <td>9:45～11:45<br>17:00～18:30</td>                         
                     </tr>
                     <tr>
                         <th>日曜*</th>
-                        <td>9:00～10:00:45<br>10:00～11:30</td>                         
+                        <td>9:00～10:45<br>10:00～11:30<br>16:30～18:00</td>                         
                     </tr>
                     <tr>
                         <th>*</th>
@@ -108,7 +112,7 @@
             </div>
             <!-- ↓ location-infoの外に出す -->
             <div class="location-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3252.352158816183!2d139.52958211060266!3d35.39652064544878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185a9c61b2c5ef%3A0x56fcc5c2eb0af471!2zT05FIEZPUiBBTEzmqKrmtZwg5Zyw5Z-f5Lqk5rWB5pa96Kit!5e0!3m2!1sja!2sjp!4v1752133930295!5m2!1sja!2sjp" width="720" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3252.212533047667!2d139.5440613752376!3d35.39998214537348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x62f9088893d3e327%3A0x911c30cf103a5d60!2zS0lEJ1Pjg5fjg63jgrDjg6njg5_jg7PjgrDjg6njg5zoiJ7lsqHmlZnlrqQgS0FHQVJJ!5e0!3m2!1sja!2sjp!4v1756384963846!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <a href="/pdf/maioka.pdf" target="_blank"></a><iframe src="pdf/maioka.pdf" width="100%" height="450px" style="border: none;"></iframe>
             </div>
         
@@ -154,6 +158,24 @@
             <small>&copy; 2021 KAGARI</small>
         </div>
     </footer>
-<script src="js/menu.js"></script>
+    <script src="js/menu.js"></script>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 3000); // 3秒ごとに切り替え
+        showSlide(currentSlide); // 初期表示
+    </script>
 </body>
 </html>
