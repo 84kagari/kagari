@@ -7,7 +7,7 @@
    viewBox="0 0 54.997087 54.997091"
    version="1.1"
    id="svg1"
-   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    sodipodi:docname="P-Py.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -25,15 +25,16 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1.788924"
-     inkscape:cx="60.930481"
-     inkscape:cy="37.732179"
-     inkscape:window-width="1366"
-     inkscape:window-height="697"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:cx="14.254379"
+     inkscape:cy="38.291174"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
-     showguides="true">
+     showguides="true"
+     showgrid="false">
     <inkscape:page
        x="0"
        y="0"
@@ -41,7 +42,10 @@
        height="54.997089"
        id="page1"
        margin="70.992393 0 59.812481"
-       bleed="0" />
+       bleed="0"
+       inkscape:export-filename="P-Py.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <sodipodi:guide
        position="27.498543,26.019535"
        orientation="1,0"

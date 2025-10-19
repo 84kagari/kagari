@@ -7,7 +7,8 @@
    width="704.85645"
    height="779.28479"
    viewBox="0 0 704.85645 779.28479"
-   sodipodi:docname="KAGARI (完成)②.ai"
+   sodipodi:docname="kagariB.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -375,7 +376,17 @@
      inkscape:showpageshadow="2"
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1">
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.0650792"
+     inkscape:cx="273.68857"
+     inkscape:cy="390.11184"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer-MC5">
     <inkscape:page
        x="-2.4444591e-06"
        y="1.8424998e-08"
@@ -383,7 +394,10 @@
        height="779.28479"
        id="page2"
        margin="0"
-       bleed="0" />
+       bleed="0"
+       inkscape:export-filename="kagariB.png.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
   </sodipodi:namedview>
   <g
      id="layer-MC5"

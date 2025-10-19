@@ -410,8 +410,16 @@ img {
         background-image: url(../images/classroom.svg);
     }
     .cover-totsukaclass {
-        background-image: url(../images/totsuka.svg);
+        /* Use PNG fallback because some Safari/iPhone versions fail to render certain SVGs */
+        background-image: url(../images/totsuka.png);
         background-size: 300px auto; /* 幅300pxで高さは自動 */
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    /* fallback rule for maioka if referenced as a cover elsewhere */
+    .cover-maiokaclass {
+        background-image: url(../images/maioka.png);
+        background-size: 300px auto;
         background-repeat: no-repeat;
         background-position: center;
     }
