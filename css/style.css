@@ -321,6 +321,27 @@ img {
 .sns-item .heading-medium {
     margin-bottom: .5rem;
 }
+.instagram-link,
+.sns-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #432;
+    border-radius: 999px;
+    color: #432;
+    font-weight: bold;
+}
+.instagram-link:hover,
+.sns-link:hover {
+    background-color: #432;
+    color: #fff;
+}
+.sns-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    max-width: 680px;
+}
 .icon-p {
     aspect-ratio: auto !important;
     width: 300px;
@@ -701,3 +722,4 @@ iframe { /* ← スペースを詰める */
     margin-top: 0;
   }
 }
+
